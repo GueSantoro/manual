@@ -1,0 +1,150 @@
+CREATE DATABASE manual_gt4;
+USE manual_gt4;
+
+CREATE TABLE montadora (
+id int auto_increment primary key,
+montadora varchar (50)
+);
+
+CREATE TABLE modelo (
+id int auto_increment primary key,
+modelo varchar (100)
+);
+
+CREATE TABLE imobilizador (
+id int auto_increment primary key,
+imobilizador varchar (50)
+);
+
+CREATE TABLE tiposimulador (
+id int auto_increment primary key,
+tipo varchar (5)
+);
+
+CREATE TABLE alimentacao (
+id int auto_increment primary key,
+funcao varchar (50),
+pinos_central varchar (10),
+referencia varchar (10),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+CREATE TABLE sensor (
+id int auto_increment primary key,
+funcao varchar (50),
+pinos_central varchar (10),
+referencia varchar (10),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+CREATE TABLE sensor2 (
+id int auto_increment primary key,
+funcao varchar (50),
+pinos_central varchar (10),
+referencia varchar (10),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+CREATE TABLE atuador (
+id int auto_increment primary key,
+funcao varchar (50),
+pinos_central varchar (10),
+referencia varchar (10),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+CREATE TABLE atuador2 (
+id int auto_increment primary key,
+funcao varchar (50),
+pinos_central varchar (10),
+referencia varchar (10),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+CREATE TABLE alarme (
+id int auto_increment primary key,
+funcao varchar (50),
+pinos_central varchar (10),
+referencia varchar (10),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+CREATE TABLE comunicacao (
+id int auto_increment primary key,
+funcao varchar (50),
+pinos_central varchar (10),
+referencia varchar (10),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+CREATE TABLE injetor (
+id int auto_increment primary key,
+funcao varchar (50),
+pinos_central varchar (10),
+referencia varchar (10),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+CREATE TABLE pbi (
+id int auto_increment primary key,
+funcao varchar (50),
+pinos_central varchar (10),
+referencia varchar (10),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+CREATE TABLE imagem (
+id int auto_increment primary key,
+arquivo varchar (500),
+imagem varchar (100)
+);
+
+CREATE TABLE manual (
+id int auto_increment primary key,
+montadora varchar (50),
+modelo varchar (100),
+imobilizador varchar (30),
+tiposimulador varchar (5),
+imagem varchar (100),
+alimentacao int,
+sensor int,
+sensor2 int,
+atuador int,
+atuador2 int,
+alarme int,
+comunicacao int,
+injetor int,
+pbi int
+);
+
+CREATE TABLE manual (
+id int auto_increment primary key,
+montadora varchar (50),
+modelo varchar (100),
+imobilizador varchar (30),
+tiposimulador varchar (5),
+imagem varchar (100),
+tipoSinal_1 int,
+tipoSinal_2 int,
+tipoSinal_3 int
+);
+
+
+insert into IMOBILIZADOR (IMOBILIZADOR)
+values ('CENTRAL');
+insert into IMOBILIZADOR (IMOBILIZADOR)
+values ('PAINEL');
+insert into IMOBILIZADOR (IMOBILIZADOR)
+values ('BC');
+insert into IMOBILIZADOR (IMOBILIZADOR)
+values ('IMOBILIZADOR');
+
