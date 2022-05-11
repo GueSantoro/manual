@@ -19,12 +19,17 @@ import view.Form_Cadastro_Manual;
  */
 public class Form_Manual extends Form_Cadastro_Manual {
 
-    Controle_Manual tm = new Controle_Manual();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	Controle_Manual tm = new Controle_Manual();
     Controle_Sinal ts = new Controle_Sinal();
     JFileChooser fc = new JFileChooser();
     BufferedImage imagem;
 
-    public Form_Manual() {
+    public Form_Manual() throws Exception {
         setTitle(" EDITOR DO MANUAL ");
         ComboBox_Montadora();
         ComboBox_Modelo();

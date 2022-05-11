@@ -1,15 +1,15 @@
 package view;
 
-import controle.Controle_Manual;
-import dao.ConexaoBanco;
-import form.Form_GerarPdf;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import modelo.Modelo_Manual;
+
+import controle.Controle_Manual;
+import dao.ConexaoBanco;
 import util.GerarPdf;
 
 /**
@@ -17,7 +17,12 @@ import util.GerarPdf;
  */
 abstract public class Form_Cadastro_Manual extends javax.swing.JInternalFrame {
 
-    Controle_Manual cs = new Controle_Manual();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	Controle_Manual cs = new Controle_Manual();
     ResultSet resultado;
     Connection conn;
     PreparedStatement stm;
