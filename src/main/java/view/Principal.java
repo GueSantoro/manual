@@ -1,10 +1,10 @@
 package view;
 
+import javax.swing.JFrame;
+
 import form.Form_Manual;
 import form.Form_Modelo;
 import form.Form_Sinais;
-import java.io.IOException;
-import javax.swing.JFrame;
 import util.GerarPdf;
 import util.PosicaoFormulario;
 
@@ -13,15 +13,18 @@ import util.PosicaoFormulario;
  */
 public class Principal extends javax.swing.JFrame {
 
-    PosicaoFormulario form = new PosicaoFormulario();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	PosicaoFormulario form = new PosicaoFormulario();
 
     public Principal() {
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
-    @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jDescktop = new javax.swing.JDesktopPane();
@@ -82,7 +85,12 @@ public class Principal extends javax.swing.JFrame {
         itemNovo.setText("Novo Cadastro Manual");
         itemNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemNovoActionPerformed(evt);
+                try {
+					itemNovoActionPerformed(evt);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
         });
         jArquivo.add(itemNovo);
@@ -226,7 +234,7 @@ public class Principal extends javax.swing.JFrame {
         form.abrirFormulario(tela = new FormBusca(), jDescktop);
     }//GEN-LAST:event_itemBuscarActionPerformed
 
-    private void itemNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemNovoActionPerformed
+    private void itemNovoActionPerformed(java.awt.event.ActionEvent evt) throws Exception {//GEN-FIRST:event_itemNovoActionPerformed
         Form_Manual tela;
         form.abrirFormulario(tela = new Form_Manual(), jDescktop);
     }//GEN-LAST:event_itemNovoActionPerformed
