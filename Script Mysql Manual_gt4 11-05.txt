@@ -1,0 +1,203 @@
+create database manual_gt4;
+
+use manual_gt4;
+
+create table montadora(
+id int auto_increment primary key,
+montadora varchar (50)
+);
+
+create table modelo(
+id int auto_increment primary key,
+modelo varchar (150)
+);
+
+create table imobilizador(
+id int auto_increment primary key,
+imobilizador varchar (50)
+);
+
+create table tiposimulador(
+id int auto_increment primary key,
+tipo varchar (5)
+);
+
+insert into tiposimulador(tipo)
+value ('GT3');
+
+insert into tiposimulador(tipo)
+value ('GT4');
+
+create table imagem(
+id int auto_increment primary key,
+arquivo varchar (500),
+imagem varchar (30)
+);
+
+create table alimentacao(
+id int auto_increment primary key,
+funcao varchar (150),
+pinos_central varchar (20),
+referencia varchar (5),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+create table sensor(
+id int auto_increment primary key,
+funcao varchar (150),
+pinos_central varchar (20),
+referencia varchar (5),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+create table sensor2(
+id int auto_increment primary key,
+funcao varchar (150),
+pinos_central varchar (20),
+referencia varchar (5),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+create table atuador(
+id int auto_increment primary key,
+funcao varchar (150),
+pinos_central varchar (20),
+referencia varchar (5),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+create table atuador2(
+id int auto_increment primary key,
+funcao varchar (150),
+pinos_central varchar (20),
+referencia varchar (5),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+create table alarme(
+id int auto_increment primary key,
+funcao varchar (150),
+pinos_central varchar (20),
+referencia varchar (5),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+create table comunicacao(
+id int auto_increment primary key,
+funcao varchar (150),
+pinos_central varchar (20),
+referencia varchar (5),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+create table injetor(
+id int auto_increment primary key,
+funcao varchar (150),
+pinos_central varchar (20),
+referencia varchar (5),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+create table pbi(
+id int auto_increment primary key,
+funcao varchar (150),
+pinos_central varchar (20),
+referencia varchar (5),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30)
+);
+
+create table sinal(
+id int auto_increment primary key,
+tipo vachar (30),
+funcao varchar (150),
+pinos_central varchar (20),
+referencia varchar (5),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30),
+id_Manual int,
+foreign key (id_manual)references manual(id)
+);
+
+create table sinal_1(
+id int auto_increment primary key,
+tipo vachar (30),
+funcao varchar (150),
+pinos_central varchar (20),
+referencia varchar (5),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30),
+id_Manual int,
+foreign key (id_manual)references manual(id)
+);
+
+create table sinal_2(
+id int auto_increment primary key,
+tipo vachar (30),
+funcao varchar (150),
+pinos_central varchar (20),
+referencia varchar (5),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30),
+id_Manual int,
+foreign key (id_manual)references manual(id)
+);
+
+create table sinal_3(
+id int auto_increment primary key,
+tipo vachar (30),
+funcao varchar (150),
+pinos_central varchar (20),
+referencia varchar (5),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30),
+id_Manual int,
+foreign key (id_manual)references manual(id)
+);
+
+
+create table sinal_4(
+id int auto_increment primary key,
+tipo vachar (30),
+funcao varchar (150),
+pinos_central varchar (20),
+referencia varchar (5),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30),
+id_Manual int,
+foreign key (id_manual)references manual(id)
+);
+
+create table sinal_5(
+id int auto_increment primary key,
+tipo vachar (30),
+funcao varchar (150),
+pinos_central varchar (20),
+referencia varchar (5),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30),
+id_Manual int,
+foreign key (id_manual)references manual(id)
+);
+
+create table sinal_6(
+id int auto_increment primary key,
+tipo vachar (30),
+funcao varchar (150),
+pinos_central varchar (20),
+referencia varchar (5),
+conectorgt3 varchar (30),
+conectorgt4 varchar (30),
+id_Manual int,
+foreign key (id_manual)references manual(id)
+);
+
+create table sinal_7(
+                      
